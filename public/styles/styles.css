@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    visibility: hidden;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+h1 {
+    font-family: 'Manrope', sans-serif;
+}
+
+p {
+    font-family: 'Manrope', sans-serif;
+}
