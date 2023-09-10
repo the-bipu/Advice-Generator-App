@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.get("/", async function(req, res){
     try {
         const result = await axios.get("https://api.adviceslip.com/advice");
-        res.render("index.ejs", {lat: result.data.slip.id, lng: result.data.slip.advice});
+        res.render("index.ejs", {id: result.data.slip.id, advice: result.data.slip.advice});
     } catch (error) {
         console.log(error.response.data);
         res.status(500);
