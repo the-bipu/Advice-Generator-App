@@ -6,12 +6,13 @@ import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
 
 const app = express();
-app.use(express.static('assets'));
-
 app.use(bodyParser.urlencoded({extended: true}));
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
+app.use(express.static(__dirname + '/assets'));
 
 // Set up views directory
 app.set('views', path.join(__dirname, 'views'));
