@@ -4,20 +4,10 @@ import axios from "axios";
 
 const app = express();
 app.use(express.static('assets'));
+app.use(express.static('views'));
 
 app.use(bodyParser.urlencoded({extended: true}));
-
 app.set('view engine', 'ejs');
-
-// app.get("/", async function(req, res){
-//     try {
-//         const result = await axios.get("https://api.adviceslip.com/advice");
-//         res.render("../views/index.js", {id: result.data.slip.id, advice: result.data.slip.advice});
-//     } catch (error) {
-//         console.log(error.response.data);
-//         res.status(500);
-//     }
-// })
 
 app.get("/", async function(req, res) {
     try {
