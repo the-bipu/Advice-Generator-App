@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import axios from "axios";
 
 const app = express();
-app.use(express.static('public'));
+app.use(express.static('assets'));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
