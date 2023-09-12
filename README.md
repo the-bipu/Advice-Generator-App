@@ -1,6 +1,6 @@
 # Frontend Mentor - Advice generator app
 
-![Design preview for the Advice generator app coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Advice generator app coding challenge](./public/design/desktop-preview.jpg)
 
 # Frontend Mentor - Advice generator app solution
 
@@ -37,6 +37,10 @@ Users should be able to:
 - Screenshot on Hover
 
 ![](./screenshot-hover.png)
+
+- Screenshot ( Mobile )
+
+![](./screenshot-mobile.png)
 
 ### Links
 
