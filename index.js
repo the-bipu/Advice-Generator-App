@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 app.get("/", async function(req, res) {
     try {
         const result = await axios.get("https://api.adviceslip.com/advice");
-        res.render("./index.ejs", { id: result.data.slip.id, advice: result.data.slip.advice });
+        res.render("index.ejs", { id: result.data.slip.id, advice: result.data.slip.advice });
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Internal Server Error' });
