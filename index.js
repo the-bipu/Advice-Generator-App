@@ -17,6 +17,6 @@ app.get("/", async function(req, res){
     }
 })
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log("Sir, Your server is ready on port 3000 in your honour.")
 })
