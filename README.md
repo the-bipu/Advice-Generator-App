@@ -61,22 +61,41 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+- Tried keyframes for the first time.
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+@keyframes glowing {
+    0% {
+        background-color: hsl(150, 100%, 66%);
+        box-shadow: 0 0 5px hsl(150, 100%, 66%);
+    }
+    50% {
+        background-color: hsl(150, 100%, 66%);
+        box-shadow: 0 0 20px hsl(150, 100%, 66%);
+    }
+    100% {
+        background-color: hsl(150, 100%, 66%);
+        box-shadow: 0 0 5px hsl(150, 100%, 66%);
+    }
 }
 ```
+
+- This is the first time i used the url and path field in my code and previously i have used the __dirname but this time i understand the concept of where it comes from.
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+import { fileURLToPath } from 'url';
+import path, { dirname } from 'path';
+
+const app = express();
+app.use(bodyParser.urlencoded({extended: true}));
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+app.use(express.static(__dirname + '/assets'));
+
+// Set up views directory
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 ```
 
 ### Continued development
@@ -85,8 +104,8 @@ This project is complete as per the given challenge. I don't want to update it m
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [MIME Error on Vercel](https://stackoverflow.com/questions/48248832/stylesheet-not-loaded-because-of-mime-type) - This helped me for fixing the issue of MIME. I really liked this article cause it's so frustrating when you check all the things and a little MIME error appears in your code.
+- [For Deployment](https://jonathans199.medium.com/deploy-node-js-express-api-to-vercel-dbf4461795a5) - This is an amazing article which helped me finally understand the deployment of node apps using vercel. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
@@ -95,5 +114,5 @@ This project is complete as per the given challenge. I don't want to update it m
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+Until now i haven't seen the solution of any other person but i use chatGPT a lot when i need to debug a code section, or when i have to understand a concept.
 
